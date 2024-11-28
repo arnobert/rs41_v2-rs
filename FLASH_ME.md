@@ -1,30 +1,30 @@
-* Terminal A:
+## Terminal A:
 
-** openocd -f interface/cmsis-dap.cfg -c "transport select swd"  -f target/stm32l4x.cfg
+* `openocd -f interface/cmsis-dap.cfg -c "transport select swd"  -f target/stm32l4x.cfg`
 
-* Terminal B:
-** telnet 127.0.0.1 4444
+## Terminal B:
+* `telnet 127.0.0.1 4444`
 
-* Telnet commands:
+### Telnet commands:
 
-* reset halt
+* `reset halt`
 
-* flash protect 0 0 last off
+* `flash protect 0 0 last off`
 
-** --POWER CYCLE--
+* --POWER CYCLE--
 
-* reset halt
+* `reset halt`
 
-* stm32l4x option_write 0 0x20 0x0 0x0
+* `stm32l4x option_write 0 0x20 0x0 0x0`
 
-** -- POWER CYCLE --
+* -- POWER CYCLE --
 
-* reset halt
+* `reset halt`
 
-* stm32l4x unlock 0
+* `stm32l4x unlock 0`
 
-** -- POWER CYCLE -- 
+* -- POWER CYCLE -- 
 
-* reset halt
+* `reset halt`
 
-* stm32f4x mass erase 0
+* `stm32f4x mass erase 0`
